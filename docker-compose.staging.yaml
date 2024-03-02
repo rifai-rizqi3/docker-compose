@@ -7,10 +7,14 @@ services:
       dockerfile: Dockerfile.staging
       args:
         - VERSION=1.1.1
+    ports:
+      - 8080:80
 
   nodejs:
     container_name: node-ku
     build: 
       context: ./docker/nodejs
       dockerfile: Dockerfile.staging
+    ports:
+      - 5656:5656
     
