@@ -1,0 +1,13 @@
+services:
+  nginx-1:
+    container_name: nginx-ku1
+    build: 
+      context: ./docker/nginx
+      dockerfile: Dockerfile.staging
+
+  nodejs:
+    container_name: node-ku
+    build: 
+      context: ./docker/nodejs
+      dockerfile: Dockerfile.staging
+    
