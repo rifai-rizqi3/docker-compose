@@ -1,3 +1,5 @@
+version: "3.2"
+
 services:
   mysql:
     container_name: mysql-ku
@@ -13,18 +15,18 @@ volumes:
   mysql-dari-compose:
 
   # nginx:
-  #   container_name: nginx-ku
-  #   image: nginx:alpine
-    # depends_on:
-    #   - mysql
-    # ports:
-    #   - 8080:80
-    # command: 
-    # - /bin/bash
-    # - -c
-    # - |
-    #   echo "nginx dari array style 1" > /usr/share/nginx/html/index/html/index.html
-    #   nginx -g 'daemon off;'
+  # container_name: nginx-ku
+  # image: nginx:alpine
+  # depends_on:
+  #   - mysql
+  # ports:
+  #   - 8080:80
+  # command:
+  # - /bin/bash
+  # - -c
+  # - |
+  #   echo "nginx dari array style 1" > /usr/share/nginx/html/index/html/index.html
+  #   nginx -g 'daemon off;'
 
   # nginx2:
   #   container_name: nginx-ku2
@@ -34,8 +36,6 @@ volumes:
   #   ports:
   #     - 8081:80
   #   command: [l"sh", "-c", "echo 'nginx dari array 2 mantap' > /usr/share/nginx/html/index/html/index.html && nginx -g 'daemon off;'" ]
-      
-
 
   # mysql:
   #   container_name: mysql-ku
@@ -43,10 +43,9 @@ volumes:
   #   environment:
   #     - MYSQL_ROOT_PASSWORD=mantap123
 
-  
   # nodejs:
   #   container_name: node-ku
-  #   build: 
+  #   build:
   #     context: ./docker/nodejs
   #     dockerfile: Dockerfile.staging
   #   ports:
