@@ -9,8 +9,7 @@ COPY package\* .
 RUN npm install
 
 COPY . .
-
-# CMD ["npm", "run", "build"]
+CMD ["npm", "run", "build"]
 
 .dockerignore
 node_modules
